@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+
+# Test data (generated automatically)
+test_data/
+
+# Logs (generated at runtime)
+logs/
+
+# Mac system files
+.DS_Store
+.AppleDouble
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Environment
+.env
+venv/
+env/
