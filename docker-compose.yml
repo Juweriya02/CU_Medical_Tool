@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+
+  app:
+    build: .
+    container_name: cu_medical_tool
+    volumes:
+      - ./logs:/app/logs
+      - ./test_data:/app/test_data
+      - ./archived_data:/app/archived_data
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    command: python3 main.py
+
+  test:
+    build: .
+    container_name: cu_medical_tool_tests
+    volumes:
+      - ./logs:/app/logs
+      - ./test_data:/app/test_data
+    command: python3 -m unittest discover -v
